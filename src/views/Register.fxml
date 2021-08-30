@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.RegisterController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="192.0" style="-fx-background-color: #FED700 #FED700 #FED700 #FED700;">
+         <children>
+            <ImageView fitHeight="138.0" fitWidth="200.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../register.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="39.0" layoutY="173.0" prefHeight="15.0" prefWidth="99.0" text="00216xxxxx" />
+            <Label layoutX="39.0" layoutY="208.0" prefHeight="17.0" prefWidth="131.0" text="challenge@support.tn" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="500.0" prefWidth="900.0">
+         <children>
+            <VBox layoutX="129.0" layoutY="40.0" prefHeight="288.0" prefWidth="247.0" spacing="12.0">
+               <children>
+                  <TextField fx:id="tfLogin" prefWidth="247.0" />
+                  <PasswordField fx:id="tfPassword" />
+                  <PasswordField fx:id="tfPasswordConfirm" layoutX="10.0" layoutY="48.0" prefHeight="26.0" prefWidth="229.0" />
+                  <TextField fx:id="tfEmail" />
+                  <TextField fx:id="tfPays" />
+                  <TextField fx:id="tfVille" prefHeight="26.0" prefWidth="251.0" />
+                  <TextField fx:id="tfTel" prefHeight="26.0" prefWidth="253.0" />
+                  <TextField fx:id="tfAdresse" prefHeight="37.0" prefWidth="247.0" />
+               </children>
+            </VBox>
+            <VBox layoutY="40.0" prefHeight="379.0" prefWidth="200.0" spacing="16.0">
+               <children>
+                  <Label prefHeight="22.0" prefWidth="99.0" text="Login">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Password">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="111.0" text="repeat password">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Email">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Pays">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Country">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Tel">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="314.0" prefHeight="35.0" prefWidth="116.0" text="Adresse">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="35.0" prefWidth="116.0" text="Code postale">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Domaine">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label layoutX="48.0" layoutY="117.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnRegister" layoutX="127.0" layoutY="447.0" mnemonicParsing="false" onAction="#ajouterpersonne" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #FED700 #FED700 #FED700 #FED700 #FED700 #FED700 #FED700 #FED700; -fx-cursor: hand;" text="register" />
+            <Button fx:id="btnReset" layoutX="252.0" layoutY="447.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #FED700 #FED700 #FED700 #FED700 #FED700 #FED700 #FED700 #FED700; -fx-cursor: hand;" text="Reset" />
+            <Label layoutX="127.0" layoutY="501.0" text="Already member?">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogin" layoutX="252.0" layoutY="495.0" mnemonicParsing="false" onAction="#loginEvent" style="-fx-background-color: #0000; -fx-cursor: hand;" text="Login!" textFill="#3e80a3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="tfCode" layoutX="129.0" layoutY="351.0" prefHeight="26.0" prefWidth="247.0" />
+            <TextField fx:id="tfDomaine" layoutX="129.0" layoutY="387.0" prefHeight="26.0" prefWidth="247.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

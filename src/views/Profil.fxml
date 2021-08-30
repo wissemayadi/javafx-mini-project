@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1191.0" stylesheets="@profilstyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ProfilController">
+   <left>
+      <VBox prefHeight="740.0" prefWidth="323.0" styleClass="primary-color" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="228.0" prefWidth="331.0" spacing="15.0">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="128.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/imageprofil.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbId" text="label" textFill="#ededed">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="editButton" mnemonicParsing="false" onAction="#modif" onMouseClicked="#modif" prefHeight="30.0" prefWidth="105.0" style="-fx-cursor: hand;" text="Edit profile" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="320.0" prefWidth="328.0" spacing="40.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="33.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../Images/data1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="4.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="173.0" style="-fx-cursor: hand;" text="Hiring management" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../Images/add.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="172.0" style="-fx-cursor: hand;" text="Add new offer" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0" prefHeight="45.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../Images/icons8-cv.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="4.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Button fx:id="cvBtn" mnemonicParsing="false" onAction="#cvUpload" prefHeight="27.0" prefWidth="174.0" style="-fx-cursor: hand;" text="Cv upload" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="45.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../Images/icons8-delete_trash.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="4.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="178.0" style="-fx-cursor: hand;" text="Delete profil" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="lbDownload" prefHeight="17.0" prefWidth="95.0" text="Label" textFill="WHITE" />
+         </children></VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="secondary-color" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="69.0" prefWidth="330.0" text="Profil settings" textFill="#fafafa">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" right="50.0" top="30.0" />
+               </padding>
+            </Label>
+            <VBox prefHeight="67.0" prefWidth="897.0" spacing="30.0">
+               <children>
+                  <VBox prefHeight="14.0" prefWidth="897.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="337.0" text="Profil details" textFill="#fafafa">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="26.0" prefWidth="897.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="12.0" prefWidth="169.0" text="Username" textFill="#fafafa">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="35.0" prefWidth="124.0" />
+                        <TextField fx:id="TfLogin" editable="false" prefHeight="27.0" prefWidth="246.0" style="-fx-text-inner-color: white;">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="13.0" />
+                           </font></TextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="42.0" prefHeight="26.0" prefWidth="897.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="12.0" prefWidth="169.0" text="Country" textFill="#fafafa">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="35.0" prefWidth="124.0" />
+                        <TextField fx:id="tfPays" editable="false" prefHeight="27.0" prefWidth="246.0" style="-fx-text-inner-color: white;">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="13.0" />
+                           </font></TextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="79.0" prefHeight="26.0" prefWidth="897.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="12.0" prefWidth="169.0" text="State" textFill="#fafafa">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="35.0" prefWidth="124.0" />
+                        <TextField fx:id="tfVille" editable="false" prefHeight="27.0" prefWidth="246.0" style="-fx-opacity: 10;">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="13.0" />
+                           </font></TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="93.0" prefHeight="67.0" prefWidth="897.0" spacing="30.0">
+               <children>
+                  <VBox prefHeight="14.0" prefWidth="897.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="337.0" text="Contact info : " textFill="#fafafa">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </VBox>
+                  <HBox prefHeight="26.0" prefWidth="897.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="12.0" prefWidth="169.0" text="Tel" textFill="#fafafa">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="35.0" prefWidth="124.0" />
+                        <TextField fx:id="tfTel" editable="false" prefHeight="27.0" prefWidth="246.0" style="-fx-opacity: 10;">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="13.0" />
+                           </font></TextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="42.0" prefHeight="26.0" prefWidth="897.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="12.0" prefWidth="169.0" text="email" textFill="#fafafa">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="35.0" prefWidth="124.0" />
+                        <TextField fx:id="tflEmail" editable="false" prefHeight="27.0" prefWidth="246.0" style="-fx-opacity: 10;">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="13.0" />
+                           </font></TextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="79.0" prefHeight="26.0" prefWidth="897.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="12.0" prefWidth="169.0" text="Field" textFill="#fafafa">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="35.0" prefWidth="124.0" />
+                        <TextField fx:id="tfDomaine" editable="false" prefHeight="27.0" prefWidth="246.0" style="-fx-opacity: 10;">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="13.0" />
+                           </font></TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="897.0">
+               <children>
+     
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

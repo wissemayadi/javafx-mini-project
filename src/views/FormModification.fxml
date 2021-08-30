@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="updateScene" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FormModificationController">
+   <children>
+      <VBox layoutX="14.0" layoutY="32.0" prefHeight="264.0" prefWidth="100.0" spacing="30.0">
+         <children>
+            <Label text="login">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font></Label>
+            <Label text="email">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font></Label>
+            <Label text="pays">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font></Label>
+            <Label text="ville">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font></Label>
+            <Label text="tel">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font></Label>
+            <Label text="domaine">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <VBox layoutX="142.0" layoutY="32.0" prefHeight="264.0" prefWidth="351.0" spacing="20.0">
+         <children>
+            <TextField fx:id="tfLogin" />
+            <TextField fx:id="tfEmail" />
+            <TextField fx:id="tfPays" />
+            <TextField fx:id="tfVille" />
+            <TextField fx:id="tfTel" />
+            <TextField fx:id="tfDomaine" />
+         </children>
+      </VBox>
+      <HBox layoutX="145.0" layoutY="313.0" prefHeight="63.0" prefWidth="311.0">
+         <children>
+            <Button fx:id="btnUpdate" mnemonicParsing="false" text="Update" />
+            <Button fx:id="btnBack" lineSpacing="100.0" mnemonicParsing="false" text="Back">
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="248.0" layoutY="6.0" prefHeight="22.0" prefWidth="227.0" text="Edit your profil Info" textFill="#952121">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="26.0" fitWidth="45.0" layoutX="75.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/setting.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
