@@ -3,7 +3,9 @@ node{
     git 'https://github.com/wissemayadi/javafx-mini-project'
   }
   stage('Compile-Package'){
-    sh 'mvn package'
+     def mvnHome= tool name: 'maven', type: 'maven'
+
+    sh "${mvnHome}/bin/mvn package"
   }
 }
     
